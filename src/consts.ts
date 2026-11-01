@@ -6,10 +6,9 @@ export const SITE_DESCRIPTION =
 export const AUTHOR = 'Josh Garverick';
 
 // Shown in the header and footer. Remove any you don't want, or add more.
-// TODO: replace the placeholder handles with your real profile URLs.
 export const SOCIAL_LINKS: { label: string; href: string }[] = [
-	{ label: 'GitHub', href: 'https://github.com/YOUR-GITHUB-HANDLE' },
-	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/' },
+	{ label: 'GitHub', href: 'https://github.com/jgarverick' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/josh-garverick/' },
 	{ label: 'Speaking', href: 'https://sessionize.com/josh-garverick/' },
 ];
 

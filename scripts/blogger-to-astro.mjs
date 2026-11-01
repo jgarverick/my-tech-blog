@@ -21,7 +21,7 @@
  *   --swa-config <file>    Merge the redirects into this staticwebapp.config.json
  *                          (for example, public/staticwebapp.config.json)
  */
-import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { XMLParser } from 'fast-xml-parser';
@@ -225,15 +225,6 @@ turndown.addRule('separator', {
 
 const downloaded = new Map(); // remote URL -> local public URL
 
-async function exists(p) {
-  try {
-    await access(p);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 async function localizeImages(html, slug) {
   const srcs = new Set([...html.matchAll(/<img\b[^>]*?\bsrc=["']([^"']+)["']/gi)].map((m) => m[1]));
   let out = html;
@@ -260,10 +251,9 @@ async function downloadImage(url, slug) {
     if (!path.extname(name)) name += '.' + (type.split('/')[1]?.split(';')[0].replace('jpeg', 'jpg') || 'jpg');
     const dir = path.join(opts['images-dir'], slug);
     await mkdir(dir, { recursive: true });
-    let file = path.join(dir, name);
-    for (let i = 2; await exists(file); i++) {
-      file = path.join(dir, name.replace(/(\.\w+)$/, `-${i}$1`));
-    }
+    // Same post, same file name: it's the same image. Overwrite it so reruns
+    // don't pile up copies like diagram-2.png, diagram-3.png.
+    const file = path.join(dir, name);
     await writeFile(file, Buffer.from(await res.arrayBuffer()));
     return `${opts['images-url'].replace(/\/$/, '')}/${slug}/${path.basename(file)}`;
   } catch (err) {
