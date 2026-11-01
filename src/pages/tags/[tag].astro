@@ -1,0 +1,27 @@
+---
+import PostList from '../../components/PostList.astro';
+import Page from '../../layouts/Page.astro';
+import { getTags, type Post } from '../../lib/posts';
+
+export async function getStaticPaths() {
+	const tags = await getTags();
+	return [...tags].map(([tag, { name, posts }]) => ({
+		params: { tag },
+		props: { name, posts },
+	}));
+}
+
+interface Props {
+	name: string;
+	posts: Post[];
+}
+
+const { name, posts } = Astro.props;
+---
+
+<Page title={`Posts tagged “${name}”`} description={`Posts about ${name}.`}>
+	<p class="muted"><a href="/tags/">All tags</a></p>
+	<h1>{name}</h1>
+	<p class="muted">{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+	<PostList posts={posts} />
+</Page>

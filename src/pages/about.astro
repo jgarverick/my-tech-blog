@@ -1,0 +1,23 @@
+---
+import { SOCIAL_LINKS } from '../consts';
+import Page from '../layouts/Page.astro';
+---
+
+<Page title="About" description="About Josh Garverick.">
+	<h1>About</h1>
+	<p>
+		I'm Josh Garverick, Chief Technical Architect at Xebia. My work spans AI enablement,
+		multi-agent architecture, Azure infrastructure, and enterprise platform engineering.
+	</p>
+	<p>
+		I'm a multi-year Microsoft MVP and a published technical author with Apress and Packt. I'm
+		based in the Buffalo, New York area.
+	</p>
+	<!-- TODO: add anything else you want here: book links, current projects, talks. -->
+	<h2>Find me elsewhere</h2>
+	<ul>
+		{SOCIAL_LINKS.map(({ label, href }) => (
+			<li><a href={href} rel="me noopener">{label}</a></li>
+		))}
+	</ul>
+</Page>

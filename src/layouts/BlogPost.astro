@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+import TagList from '../components/TagList.astro';
+import Page from './Page.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage, tags = [], draft } = Astro.props;
+---
+
+<Page title={title} description={description} type="article">
+	<article>
+		<header class="post-header">
+			{draft && <p class="draft">Draft: this post isn't included in production builds.</p>}
+			<h1>{title}</h1>
+			<p class="muted">
+				<FormattedDate date={pubDate} />
+				{updatedDate && (
+					<>
+						{' · Updated '}<FormattedDate date={updatedDate} />
+					</>
+				)}
+			</p>
+			<TagList tags={tags} />
+		</header>
+		{heroImage && <Image class="hero" width={1440} height={720} src={heroImage} alt="" />}
+		<div class="prose">
+			<slot />
+		</div>
+	</article>
+</Page>
+
+<style>
+	.post-header {
+		margin-bottom: 2em;
+		padding-bottom: 1.5em;
+		border-bottom: 1px solid var(--border);
+	}
+	.post-header h1 {
+		margin-bottom: 0.25em;
+	}
+	.post-header p {
+		margin: 0;
+	}
+	.draft {
+		display: inline-block;
+		margin-bottom: 1em !important;
+		padding: 0.2em 0.75em;
+		font-size: 0.85em;
+		background: var(--surface);
+		border: 1px dashed var(--muted);
+		border-radius: 6px;
+	}
+	.hero {
+		display: block;
+		width: 100%;
+		margin-bottom: 2em;
+	}
+</style>

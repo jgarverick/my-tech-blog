@@ -1,0 +1,45 @@
+---
+import PostList from '../components/PostList.astro';
+import { RECENT_POST_COUNT, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Page from '../layouts/Page.astro';
+import { getPosts } from '../lib/posts';
+
+const posts = await getPosts();
+const recent = posts.slice(0, RECENT_POST_COUNT);
+---
+
+<Page title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<section class="intro">
+		<h1>Hi, I'm Josh.</h1>
+		<p>
+			I'm a Chief Technical Architect at Xebia. I write about Azure, platform engineering, and
+			building agentic AI systems that hold up in production.
+		</p>
+	</section>
+
+	<h2>Recent posts</h2>
+	{recent.length ? <PostList posts={recent} /> : <p class="muted">No posts yet.</p>}
+	{posts.length > recent.length && (
+		<p class="all"><a href="/blog/">All {posts.length} posts →</a></p>
+	)}
+</Page>
+
+<style>
+	.intro {
+		margin-bottom: 2.5em;
+	}
+	.intro p {
+		font-size: 1.15em;
+		color: var(--muted);
+	}
+	h2 {
+		margin-top: 0;
+		font-size: 1.1em;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--muted);
+	}
+	.all {
+		margin-top: 1.5em;
+	}
+</style>

@@ -1,0 +1,24 @@
+---
+import type { Post } from '../lib/posts';
+import FormattedDate from './FormattedDate.astro';
+import TagList from './TagList.astro';
+
+interface Props {
+	posts: Post[];
+	showDescription?: boolean;
+}
+
+const { posts, showDescription = true } = Astro.props;
+---
+
+<ul class="post-list">
+	{posts.map((post) => (
+		<li>
+			<a class="post-title" href={`/blog/${post.id}/`}>{post.data.title}</a>
+			{post.data.draft && <span class="muted"> (draft)</span>}
+			<p class="muted"><FormattedDate date={post.data.pubDate} /></p>
+			{showDescription && <p>{post.data.description}</p>}
+			<TagList tags={post.data.tags} />
+		</li>
+	))}
+</ul>

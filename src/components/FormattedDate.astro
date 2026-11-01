@@ -1,0 +1,19 @@
+---
+interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+// Date-only frontmatter (2026-11-01) parses as UTC midnight, so show it in UTC.
+// Full timestamps from Blogger show in Eastern time, where they were written.
+const isDateOnly = date.getUTCHours() === 0 && date.getUTCMinutes() === 0 && date.getUTCSeconds() === 0;
+---
+
+<time datetime={date.toISOString()}>
+	{date.toLocaleDateString('en-us', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+		timeZone: isDateOnly ? 'UTC' : 'America/New_York',
+	})}
+</time>

@@ -1,0 +1,50 @@
+---
+import { AUTHOR, SOCIAL_LINKS } from '../consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<div class="inner">
+		<span>&copy; {year} {AUTHOR}</span>
+		<ul>
+			{SOCIAL_LINKS.map(({ label, href }) => (
+				<li>
+					<a href={href} rel="me noopener" target="_blank">{label}</a>
+				</li>
+			))}
+			<li><a href="/rss.xml">RSS</a></li>
+		</ul>
+	</div>
+</footer>
+
+<style>
+	footer {
+		border-top: 1px solid var(--border);
+		color: var(--muted);
+		font-size: 0.9em;
+	}
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.5em 1em;
+		width: var(--content-width);
+		max-width: calc(100% - 2em);
+		margin: auto;
+		padding: 2em 0 3em;
+	}
+	ul {
+		display: flex;
+		gap: 1em;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		color: var(--muted);
+	}
+	a:hover {
+		color: var(--accent);
+	}
+</style>

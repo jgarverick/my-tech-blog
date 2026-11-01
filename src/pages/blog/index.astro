@@ -1,0 +1,72 @@
+---
+import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE } from '../../consts';
+import Page from '../../layouts/Page.astro';
+import { getPosts, type Post } from '../../lib/posts';
+
+const posts = await getPosts();
+
+// Group posts by year for a compact archive.
+const byYear = new Map<number, Post[]>();
+for (const post of posts) {
+	const year = post.data.pubDate.getFullYear();
+	if (!byYear.has(year)) byYear.set(year, []);
+	byYear.get(year)!.push(post);
+}
+---
+
+<Page title="Blog" description={`All posts from ${SITE_TITLE}.`}>
+	<h1>Blog</h1>
+	{posts.length === 0 && <p class="muted">No posts yet.</p>}
+	{[...byYear].map(([year, yearPosts]) => (
+		<section>
+			<h2>{year}</h2>
+			<ul class="archive">
+				{yearPosts.map((post) => (
+					<li>
+						<span class="muted date"><FormattedDate date={post.data.pubDate} /></span>
+						<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+						{post.data.draft && <span class="muted"> (draft)</span>}
+					</li>
+				))}
+			</ul>
+		</section>
+	))}
+</Page>
+
+<style>
+	h2 {
+		font-size: 1.2em;
+		color: var(--muted);
+		border-bottom: 1px solid var(--border);
+		padding-bottom: 0.25em;
+	}
+	.archive {
+		list-style: none;
+		padding: 0;
+	}
+	.archive li {
+		display: flex;
+		gap: 1em;
+		padding: 0.3em 0;
+	}
+	.date {
+		flex: 0 0 7.5em;
+		font-variant-numeric: tabular-nums;
+	}
+	.archive a {
+		color: var(--heading);
+		text-decoration: none;
+	}
+	.archive a:hover {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+	@media (max-width: 520px) {
+		.archive li {
+			flex-direction: column;
+			gap: 0;
+			padding: 0.5em 0;
+		}
+	}
+</style>

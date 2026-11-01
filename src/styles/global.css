@@ -1,0 +1,224 @@
+/*
+  Based on the Astro blog starter, which adapts Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog (MIT)
+*/
+
+:root {
+	color-scheme: light dark;
+	/* Change --accent to retheme the site. */
+	--accent: #2563eb;
+	--bg: #ffffff;
+	--surface: #f4f6fa;
+	--text: #1f2937;
+	--heading: #0b1220;
+	--muted: #5b6475;
+	--border: #e3e7ee;
+	--code-bg: #eef1f6;
+	--content-width: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--accent: #7aa2ff;
+		--bg: #0f1218;
+		--surface: #171b23;
+		--text: #d6dbe4;
+		--heading: #f3f5f9;
+		--muted: #949db0;
+		--border: #262c38;
+		--code-bg: #1c212b;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: var(--font-atkinson);
+	font-size: 18px;
+	line-height: 1.7;
+	color: var(--text);
+	background: var(--bg);
+	overflow-wrap: break-word;
+}
+main {
+	width: var(--content-width);
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 3em 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 1.6em 0 0.5em;
+	color: var(--heading);
+	line-height: 1.25;
+}
+h1 {
+	font-size: 2.4em;
+	margin-top: 0;
+}
+h2 {
+	font-size: 1.7em;
+}
+h3 {
+	font-size: 1.35em;
+}
+h4 {
+	font-size: 1.15em;
+}
+a {
+	color: var(--accent);
+	text-underline-offset: 0.15em;
+}
+strong,
+b {
+	font-weight: 700;
+}
+p,
+ul,
+ol {
+	margin: 0 0 1.25em;
+}
+img,
+video,
+iframe {
+	max-width: 100%;
+	border-radius: 8px;
+}
+img {
+	height: auto;
+}
+iframe {
+	border: 0;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+code {
+	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+	font-size: 0.88em;
+	padding: 0.1em 0.35em;
+	background: var(--code-bg);
+	border-radius: 4px;
+}
+pre {
+	padding: 1em 1.25em;
+	border-radius: 8px;
+	overflow-x: auto;
+	line-height: 1.5;
+	border: 1px solid var(--border);
+}
+pre > code {
+	all: unset;
+	font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+	font-size: 0.85em;
+}
+/* Shiki writes both themes as CSS variables; pick one per color scheme. */
+@media (prefers-color-scheme: dark) {
+	.astro-code,
+	.astro-code span {
+		color: var(--shiki-dark) !important;
+		background-color: var(--shiki-dark-bg) !important;
+	}
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1.5em;
+	font-size: 0.92em;
+}
+th,
+td {
+	padding: 0.5em 0.75em;
+	border-bottom: 1px solid var(--border);
+	text-align: left;
+}
+blockquote {
+	margin: 0 0 1.25em;
+	padding: 0.25em 0 0.25em 1.25em;
+	border-left: 4px solid var(--accent);
+	color: var(--muted);
+}
+hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2em 0;
+}
+
+/* Shared bits */
+.muted {
+	color: var(--muted);
+}
+.post-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-list > li {
+	padding: 1.1em 0;
+	border-bottom: 1px solid var(--border);
+}
+.post-list a.post-title {
+	font-size: 1.15em;
+	font-weight: 700;
+	color: var(--heading);
+	text-decoration: none;
+}
+.post-list a.post-title:hover {
+	color: var(--accent);
+}
+.post-list p {
+	margin: 0.25em 0 0;
+}
+.tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em;
+	list-style: none;
+	padding: 0;
+	margin: 0.5em 0 0;
+}
+.tag-list a {
+	display: inline-block;
+	padding: 0.05em 0.6em;
+	font-size: 0.8em;
+	color: var(--muted);
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	text-decoration: none;
+}
+.tag-list a:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 17px;
+	}
+	main {
+		padding: 1.5em 0;
+	}
+	h1 {
+		font-size: 1.9em;
+	}
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
