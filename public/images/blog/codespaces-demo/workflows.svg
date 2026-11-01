@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title description">
+  <title id="title">Codespaces and Linux devcontainer image workflows</title>
+  <desc id="description">The development track opens a Rocky Linux 9 Codespace and configures it with VS Code tools, Zsh, and Git aliases. A separate GitHub Actions track builds UBI, Rocky Linux, and Fedora images, scans them with Trivy, and publishes them to GitHub Container Registry with SARIF results.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#475569" />
+    </marker>
+  </defs>
+  <rect width="900" height="620" rx="8" fill="#f8fafc" />
+  <text x="32" y="46" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700">Codespaces and Linux devcontainer images</text>
+
+  <text x="32" y="92" fill="#334155" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700">DEVELOPMENT WORKSPACE</text>
+  <rect x="32" y="112" width="240" height="142" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+  <text x="52" y="151" fill="#1e3a8a" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">GitHub Codespaces</text>
+  <text x="52" y="185" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Create a workspace</text>
+  <text x="52" y="211" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">from the repository</text>
+
+  <rect x="330" y="112" width="240" height="142" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2" />
+  <text x="350" y="151" fill="#9a3412" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Devcontainer</text>
+  <text x="350" y="185" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Rocky Linux 9 base</text>
+  <text x="350" y="211" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">vscode user + extensions</text>
+
+  <rect x="628" y="112" width="240" height="142" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" />
+  <text x="648" y="151" fill="#166534" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Post-create setup</text>
+  <text x="648" y="185" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Zsh + Powerlevel10k</text>
+  <text x="648" y="211" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Git aliases</text>
+
+  <path d="M272 182H320" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M570 182H618" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+
+  <text x="32" y="318" fill="#334155" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700">IMAGE BUILD AND PUBLISH</text>
+  <rect x="32" y="338" width="170" height="158" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="2" />
+  <text x="52" y="378" fill="#9d174d" font-family="Segoe UI, sans-serif" font-size="19" font-weight="700">GitHub Actions</text>
+  <text x="52" y="413" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Build workflows</text>
+  <text x="52" y="439" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">per distro</text>
+
+  <rect x="252" y="338" width="254" height="158" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2" />
+  <text x="272" y="378" fill="#854d0e" font-family="Segoe UI, sans-serif" font-size="19" font-weight="700">Image variants</text>
+  <text x="272" y="413" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">RHEL UBI 8 / 9 / 10</text>
+  <text x="272" y="439" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Rocky 8 / 9 / 10</text>
+  <text x="272" y="465" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Fedora latest</text>
+
+  <rect x="556" y="338" width="130" height="158" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2" />
+  <text x="575" y="378" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="19" font-weight="700">Trivy</text>
+  <text x="575" y="413" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Scan image</text>
+  <text x="575" y="439" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">and report</text>
+
+  <rect x="736" y="338" width="132" height="158" rx="8" fill="#ecfeff" stroke="#0891b2" stroke-width="2" />
+  <text x="754" y="378" fill="#155e75" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700">Artifacts</text>
+  <text x="754" y="413" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">GHCR</text>
+  <text x="754" y="439" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">SARIF</text>
+
+  <path d="M202 417H242" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M506 417H546" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M686 417H726" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+
+  <text x="32" y="558" fill="#475569" font-family="Segoe UI, sans-serif" font-size="16">The Codespace's default Rocky Linux image is distinct from the UBI images built by CI.</text>
+</svg>
