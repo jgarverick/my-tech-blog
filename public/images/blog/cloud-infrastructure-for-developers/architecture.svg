@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title description">
+  <title id="title">Infrastructure for developers</title>
+  <desc id="description">Azure Developer CLI and Bicep provision a Container Apps environment, application, registry, monitoring, and Key Vault.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#536776"/>
+    </marker>
+    <style>
+      text { font-family: Segoe UI, sans-serif; fill: #18313f; }
+      .label { font-size: 15px; font-weight: 600; }
+      .small { font-size: 13px; fill: #536776; }
+      .title { font-size: 24px; font-weight: 700; }
+      .box { stroke-width: 2; rx: 12; }
+      .line { fill: none; stroke: #536776; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="#f4f7f6"/>
+  <text x="56" y="58" class="title">From project files to a repeatable Azure environment</text>
+  <text x="56" y="86" class="small">A conceptual view of the repository's azd and Bicep modules</text>
+
+  <rect x="56" y="145" width="240" height="118" class="box" fill="#ffffff" stroke="#b6c8c8"/>
+  <text x="80" y="180" class="label">Project configuration</text>
+  <text x="80" y="210" class="small">azure.yaml</text>
+  <text x="80" y="234" class="small">infra/main.bicep + modules</text>
+
+  <rect x="355" y="163" width="190" height="82" class="box" fill="#e2f2ef" stroke="#288879"/>
+  <text x="389" y="195" class="label">Azure Developer CLI</text>
+  <text x="402" y="220" class="small">azd up</text>
+  <path d="M296 204h52" class="line"/>
+
+  <rect x="608" y="125" width="536" height="438" class="box" fill="#ffffff" stroke="#91aab4"/>
+  <text x="638" y="163" class="label">Azure resource group</text>
+  <path d="M545 204h50" class="line"/>
+
+  <rect x="650" y="194" width="452" height="210" class="box" fill="#eef5f8" stroke="#4b8297"/>
+  <text x="678" y="228" class="label">Container Apps environment</text>
+  <text x="678" y="253" class="small">Environment logs flow to Log Analytics</text>
+
+  <rect x="680" y="282" width="222" height="88" class="box" fill="#d9efe8" stroke="#288879"/>
+  <text x="704" y="314" class="label">Container App</text>
+  <text x="704" y="340" class="small">External ingress · 1-10 replicas</text>
+
+  <rect x="928" y="282" width="146" height="88" class="box" fill="#fff0cf" stroke="#c58b20"/>
+  <text x="950" y="314" class="label">Managed identity</text>
+  <text x="950" y="340" class="small">AcrPull role</text>
+  <path d="M902 326h19" class="line"/>
+
+  <rect x="650" y="434" width="210" height="82" class="box" fill="#e5edf8" stroke="#5d7ca6"/>
+  <text x="674" y="466" class="label">Container Registry</text>
+  <text x="674" y="490" class="small">Image source for the app</text>
+  <path d="M1001 404v58h-130" class="line"/>
+
+  <rect x="886" y="434" width="216" height="82" class="box" fill="#fbe4de" stroke="#bc6851"/>
+  <text x="910" y="466" class="label">Monitoring + secrets</text>
+  <text x="910" y="490" class="small">App Insights · Log Analytics · Key Vault</text>
+  <path d="M792 404v58h83" class="line"/>
+</svg>
