@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title description">
+  <title id="title">Application Insights flat-file parser architecture</title>
+  <desc id="description">An application writes logs to a shared volume. A parser sidecar watches the files and sends traces and exceptions to Application Insights. Kubernetes probes check the sidecar health and readiness.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#475569" />
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#15803d" />
+    </marker>
+  </defs>
+  <rect width="1200" height="430" rx="8" fill="#f8fafc" />
+  <text x="40" y="46" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700">Flat-file telemetry sidecar</text>
+
+  <rect x="40" y="105" width="230" height="150" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+  <text x="60" y="145" fill="#1e3a8a" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Application</text>
+  <text x="60" y="180" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Writes logs to files</text>
+  <text x="60" y="208" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">No telemetry SDK required</text>
+
+  <rect x="335" y="105" width="210" height="150" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2" />
+  <text x="355" y="145" fill="#9a3412" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Shared volume</text>
+  <text x="355" y="180" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Mounted by both</text>
+  <text x="355" y="208" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">containers</text>
+
+  <rect x="610" y="90" width="250" height="180" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" />
+  <text x="630" y="130" fill="#166534" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Parser sidecar</text>
+  <text x="630" y="166" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">FileSystemWatcher</text>
+  <text x="630" y="194" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Tracks processed lines</text>
+  <text x="630" y="222" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Emits traces / exceptions</text>
+
+  <rect x="925" y="105" width="235" height="150" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" />
+  <text x="945" y="145" fill="#991b1b" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Application Insights</text>
+  <text x="945" y="180" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Trace telemetry</text>
+  <text x="945" y="208" fill="#334155" font-family="Segoe UI, sans-serif" font-size="16">Exception telemetry</text>
+
+  <path d="M270 180H325" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M545 180H600" fill="none" stroke="#475569" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M860 180H915" fill="none" stroke="#15803d" stroke-width="3" marker-end="url(#arrow-green)" />
+
+  <rect x="610" y="325" width="250" height="70" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2" />
+  <text x="630" y="354" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700">Kubernetes probes</text>
+  <text x="630" y="379" fill="#334155" font-family="Segoe UI, sans-serif" font-size="15">/health · /ready</text>
+  <path d="M735 315V280" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)" />
+
+  <text x="40" y="350" fill="#475569" font-family="Segoe UI, sans-serif" font-size="15">Configure the watched path with LOG_PATH.</text>
+</svg>
