@@ -25,7 +25,10 @@ const { title, description, pubDate, updatedDate, heroImage, tags = [], draft } 
 			</p>
 			<TagList tags={tags} />
 		</header>
-		{heroImage && <Image class="hero" width={1440} height={720} src={heroImage} alt="" />}
+		{/* Keep the image's own aspect ratio, and never upscale past its original width. */}
+		{heroImage && (
+			<Image class="hero" src={heroImage} width={Math.min(heroImage.width, 1440)} alt="" />
+		)}
 		<div class="prose">
 			<slot />
 		</div>
