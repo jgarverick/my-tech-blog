@@ -8,7 +8,7 @@ draft: false
 
 Greetings all! I picked up the OmniVision keyboard at GitHub Universe 2026, and while it's a fun piece of hardware, I quickly found that there wasn't an easy way to map the RGB lighting controls to keys. Rather than opening VIA every time I wanted to change the lighting, I built a key mapping file that puts those controls on their own layer, and I've shared it as a [gist](https://gist.github.com/jgarverick/c062a13d63d61641850f56fc7e34cc8a) for anyone else in the same boat.
 
-<!-- TODO: Optional: add a photo of the keyboard, or a line about where at Universe you got it. -->
+![OmniVision keyboard at GitHub Universe 2026](../../assets/blog/ghu-keyboard.png)
 
 ## What's in the gist
 
