@@ -3,7 +3,7 @@ title: "Putting RGB controls on a layer for my GitHub Universe keyboard"
 description: "A VIA key mapping file for the OmniVision keyboard from GitHub Universe 2026 that moves the RGB lighting controls to their own layer."
 pubDate: "2026-11-04"
 tags: ["Keyboards", "VIA", "QMK", "GitHub"]
-draft: true
+draft: false
 ---
 
 Greetings all! I picked up the OmniVision keyboard at GitHub Universe 2026, and while it's a fun piece of hardware, I quickly found that there wasn't an easy way to map the RGB lighting controls to keys. Rather than opening VIA every time I wanted to change the lighting, I built a key mapping file that puts those controls on their own layer, and I've shared it as a [gist](https://gist.github.com/jgarverick/c062a13d63d61641850f56fc7e34cc8a) for anyone else in the same boat.
