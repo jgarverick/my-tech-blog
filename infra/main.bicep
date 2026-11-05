@@ -21,7 +21,7 @@ param name string = 'swa-josh-blog'
 param location string = 'eastus2'
 
 @description('Optional custom domain, such as blog.example.com. Create its CNAME record first, pointing at the default hostname.')
-param customDomain string = ''
+param customDomain string = 'joshgarverick.dev'
 
 param tags object = {
   workload: 'blog'
