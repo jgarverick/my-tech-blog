@@ -3,20 +3,20 @@ title: "The Engineering Psyche at DeveloperWeek New York"
 description: "Notes from my DeveloperWeek New York 2026 session on how engineers can take stock of the current industry shift and turn it to their advantage."
 pubDate: "2026-06-12"
 tags: ["Speaking", "Career", "AI", "Conferences"]
-draft: true
+draft: false
 ---
 
-Greetings all! On June 10, I had the privilege of speaking at DeveloperWeek New York, held this year at the TWA Hotel in Queens, and I wanted to share a recap of the session along with a couple of exercises you can try on your own. The talk, "The Engineering Psyche: A Thought Experiment," was a bit of a departure from my usual architecture and Azure fare, as it focused less on the technology itself and more on the people building it.
+On June 10, I had the privilege of speaking at DeveloperWeek New York, held this year at the TWA Hotel in Queens, and I wanted to share a recap of the session along with a couple of exercises you can try on your own. The talk, "The Engineering Psyche: A Thought Experiment," was a bit of a departure from my usual architecture and Azure fare, as it focused less on the technology itself and more on the people building it.
 
 ![Josh presenting at a DeveloperWeek New York podium, with a "Same Person, Different Story" slide on the screen beside him](/images/blog/the-engineering-psyche-developerweek-nyc/devweek-nyc-stage.jpg)
 
-_Figure 1 – Walking through "Same Person, Different Story" at DeveloperWeek New York_
+_Figure 1 – Walking through an example of rebranding yourself_
 
 The session ran at 11:30 AM on the second day of the conference, a good spot for stepping back from the tooling talks and thinking about the people side of things.
 
 <!-- TODO: Optional: add a moment from the session that stuck with you. -->
 
-## Why talk about the psyche at all?
+## Why talk about this in the first place?
 
 Anyone who has spent the last twelve to eighteen months in this industry has felt the ground move. Between AI-assisted coding, agentic systems, and a steady stream of headlines about what engineers will or won't be doing in a few years, there's a very real undercurrent of unease in our community. I've had more than a few conversations with colleagues, clients, and friends who are quietly wondering where they fit once the dust settles.
 
@@ -55,10 +55,6 @@ The takeaway from that slide is the line along the bottom: same skills, same exp
 ![The DeveloperWeek New York session room, with attendees seated facing the stage and two screens showing the "Same Person, Different Story" slide](/images/blog/the-engineering-psyche-developerweek-nyc/devweek-nyc-room.jpg)
 
 _Figure 2 – The view from the back of the room_
-
-This exercise tends to be harder than it sounds, as most of us haven't touched our bios in quite a while. I went through it myself while preparing the session, and I'll admit my own bio needed more than a light edit.
-
-<!-- TODO: Optional: share a before/after of your own bio, or a reaction from someone in the room. -->
 
 ## Wrapping up
 
