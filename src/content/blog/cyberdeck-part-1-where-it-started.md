@@ -3,7 +3,7 @@ title: "Building my cyberdeck, part 1: Where it started"
 description: "The first post in a five-part series on the Raspberry Pi 4 cyberdeck I had with me at GitHub Universe 2026: why I built it, and the parts and plans I started with."
 pubDate: "2026-11-09"
 tags: ["Cyberdeck", "Raspberry Pi", "3D Printing", "Hardware"]
-draft: true
+draft: false
 ---
 
 If you stopped by while I had my cyberdeck open at GitHub Universe this year, there's a good chance you asked me one of two questions: how did you build that, and why? I got those questions enough times that it seemed easier to write the whole thing down, so this is the first of a five-part series covering how the deck came together, what went sideways along the way, and where it's headed next.

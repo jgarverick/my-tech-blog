@@ -3,7 +3,7 @@ title: "Building my cyberdeck, part 3: The CYD repos"
 description: "Part three of my cyberdeck series covers the ESP32 Cheap Yellow Displays on the deck, and how I set up the repos for the weather panel, the ADS-B radar scope, and the touchscreen control surface."
 pubDate: "2026-11-23"
 tags: ["Cyberdeck", "ESP32", "PlatformIO", "ADS-B", "Docker", "Dev Containers"]
-draft: true
+draft: false
 ---
 
 In [part 2](/blog/cyberdeck-part-2-prototyping/), I walked through prototyping the display, power, and enclosure. This post covers the part of the deck that got the most questions at GitHub Universe: the two little touchscreens that sit alongside the main display. They're ESP32 "Cheap Yellow Displays," and they ended up turning a fun hardware build into a fairly involved software project.

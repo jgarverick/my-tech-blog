@@ -3,7 +3,7 @@ title: "Building my cyberdeck, part 2: Prototyping"
 description: "Part two of my cyberdeck series covers the prototyping phase: getting a display working, designing the power path, and printing the enclosure and veneer panels."
 pubDate: "2026-11-16"
 tags: ["Cyberdeck", "Raspberry Pi", "3D Printing", "Hardware", "CadQuery"]
-draft: true
+draft: false
 ---
 
 Welcome back! In [part 1](/blog/cyberdeck-part-1-where-it-started/), I covered why I started building a cyberdeck and the parts and plans I started with. This time around, I want to dig into the prototyping phase, which is where most of the real learning happened. There's no substitute for putting parts on a bench and finding out which of your assumptions don't hold up, and I found plenty of those.
