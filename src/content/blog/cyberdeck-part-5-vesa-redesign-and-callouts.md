@@ -6,7 +6,7 @@ tags: ["Cyberdeck", "Raspberry Pi", "3D Printing", "Hardware", "GitHub Universe"
 draft: true
 ---
 
-Greetings all, and welcome to the last post in my cyberdeck series! We've covered [where it started](/blog/cyberdeck-part-1-where-it-started/), [prototyping](/blog/cyberdeck-part-2-prototyping/), [the CYD repos](/blog/cyberdeck-part-3-cyd-firmware-repos/), and [the move from Omarchy to i3](/blog/cyberdeck-part-4-omarchy-to-i3/). This one wraps things up with the biggest hardware change of the whole build, a handful of callouts that didn't fit neatly anywhere else, and a look at where the deck goes from here.
+This is the last post in my cyberdeck series. So far, we've covered [where it started](/blog/cyberdeck-part-1-where-it-started/), [prototyping](/blog/cyberdeck-part-2-prototyping/), [the CYD repos](/blog/cyberdeck-part-3-cyd-firmware-repos/), and [the move from Omarchy to i3](/blog/cyberdeck-part-4-omarchy-to-i3/). This one wraps things up with the biggest hardware change of the whole build, a handful of callouts that didn't fit neatly anywhere else, and a look at where the deck goes from here.
 
 ## Starting over with a VESA mount
 

@@ -6,7 +6,7 @@ tags: ["Cyberdeck", "ESP32", "PlatformIO", "ADS-B", "Docker", "Dev Containers"]
 draft: true
 ---
 
-Greetings all! In [part 2](/blog/cyberdeck-part-2-prototyping/), I walked through prototyping the display, power, and enclosure. This post covers the part of the deck that got the most questions at GitHub Universe: the two little touchscreens that sit alongside the main display. They're ESP32 "Cheap Yellow Displays," and they ended up turning a fun hardware build into a fairly involved software project.
+In [part 2](/blog/cyberdeck-part-2-prototyping/), I walked through prototyping the display, power, and enclosure. This post covers the part of the deck that got the most questions at GitHub Universe: the two little touchscreens that sit alongside the main display. They're ESP32 "Cheap Yellow Displays," and they ended up turning a fun hardware build into a fairly involved software project.
 
 ## What's a Cheap Yellow Display?
 
